@@ -67,20 +67,22 @@ console.log(`--------------------`);
 
 //9.calculate the revenue if all the cars are rented for a day
 console.log(`calculate the revenue if all the cars are rented for a day`);
+revenue=carBooking.map(car=>car[4]*car[5]).reduce((a,b)=>a+b)
+console.log(revenue);
+
 
 //10.count the number of sedan cars
 
 console.log(`count the number of sedan cars`);
-count=0;
-/* carBooking.forEach(cars=>{
+
+ carBooking.forEach(cars=>{
+    count=0;
 if(cars[3]=`sedan`){
-count++
+count=count+1
 }
 })
-console.log(count); */
+console.log(count);
 
-/* sedan=carBooking.filter((cars)=>cars[3]=`sedan`)
-console.log(sedan); */
 
 
 //11.`car with highest availability`
@@ -91,6 +93,12 @@ console.log(highest);
 console.log(`--------------------`);
 
 //12.print all car brands
+
+console.log(` all unique car brands`);
+carBooking.forEach(details => {
+console.log(details[1])
+
+});
 
 // 13. find the total number of available cars for all types
 console.log(`find the total number of available cars for all types`);
